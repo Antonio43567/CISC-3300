@@ -1,0 +1,19 @@
+1. Define structural vs semantic meaning in regard to HTML elements.
+
+Structural markup are elements that you can use to describe both headings and paragraphs. Structural markup includes elements such as <h1>, <h2>, and <p>. Semantic markup provides extra information; such as where emphasis is placed in a sentence, that something you have written is a quotation, who said it, and the meaning of acronyms. Semantic information is carried in elements such as <cite> and <em>.  Semantic markup basically adds extra information to a page but does not affect the structure of your web page. 
+
+
+2. Why is it important to use correct html elements when designing web pages?
+
+
+It is important to use the correct HTML elements when designing web pages because correct HTMl tags informs the browser and developer about its content. HTML also provides a structured way to organize web content so using the correct elements helps convey the semantic meaning of the content making it easier for the browser and the developer to understand the structure of the document. Well-structured HTML can also contribute to better performance by making it easier for browsers to render and display content. 
+
+3. What are forms in html? What is their purpose? When would you use one?
+
+HTML forms refer to different elements that allow you to collect information from visitors to your site. In addition to enabling users to search, forms also allow users to perform other functions online. They are used to collect user input, such as text, selections, checkboxes, and radios. The purpose of forms is to gather information from users, such as login credentials, registration details, search queries, or any other type of user input.
+
+
+4. Define and contrast inline vs block elements.
+
+Inline elements are known as elements that will always appear to continue on the same line as their neighboring elements. Inline elements sit within a block level element and do not start on a new line. Examples of inline elements include the <b>, <em>, and <img> element. Block elements on the other hand are elements that will always appear to start on a new line in the browser window. Examples of block elements are <h1>, <p>, and <li>. So the differences between these two elements are inline elements flow within the content, allowing other elements to sit beside them horizontally while block elements stack on top of each other vertically, each starting on a new line.
+
