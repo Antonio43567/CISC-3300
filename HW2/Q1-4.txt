@@ -1,5 +1,7 @@
 1. Define structural vs semantic meaning in regard to HTML elements.
 
+-Feedback: But what is structural mark up? Needs to be defined yet.
+
 Structural markup are elements that you can use to describe both headings and paragraphs. Structural markup includes elements such as <h1>, <h2>, and <p>. Semantic markup provides extra information; such as where emphasis is placed in a sentence, that something you have written is a quotation, who said it, and the meaning of acronyms. Semantic information is carried in elements such as <cite> and <em>.  Semantic markup basically adds extra information to a page but does not affect the structure of your web page. 
 
 
