@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>homework3</title>
+        
+        
+    </head>
+    <body>
+        <link rel="stylesheet" href="https://fonts.google.com/specimen/Raleway">
+
+        <div class="parent-container">
+
+            <div class="majors-container">
+
+                <div class="majors-content-container">
+                    <h3 style="color: maroon">Majors and Minors</h3>
+                    <div class="passion">What is your passion?
+                        <br> 
+                        <br>
+                        Accelerated Degree Programs
+                
+                    </div>
+                    
+                    <br> 
+                    <br> 
+                    <div class="major-button">Majors and Minors</div>
+                
+                    
+
+                </div>
+
+            </div>
+            <div class="computer-science-container">
+
+                <div class="computer-science-content-container">
+                    <div class="nav">
+
+                        Home
+                        <span class="divider">/</span>
+                        Admissions and Aid
+                        <span class="divider">/</span>
+                        Undergraduate Admission
+                        <span class="divider">/</span>
+                        Majors and Minors
+                        <span class="divider">/</span>
+                        <span style="color: #ff0000">Computer Science</span>
+
+                    </div>
+                    <br> 
+                    <br> 
+                    
+                    <h1>Computer Science</h1>
+                    <br> 
+                    <br>
+                    <div>Degree Options: Major, Minor</div>
+                    <div>Locations: Lincoln Center, Rose Hill</div>
+                    Visit the
+                    <a style="color: #ff0000" href="https://www.fordham.edu/academics/departments/computer-and-information-science/"> Computer and Information Science Department</a>
+                    
+                    <h2 style="font-size: 23px;">Wherever there’s a computer, there’s a skilled person developing, maintaining,
+                    hacking, advancing or simply using it. Be that person.</h2>
+
+                    <p style="font-size: 19px;"><img src="pic.jpg" width="250"
+                        height="250" align="right" /> It’s difficult to imagine life without computers when they’re so central to our information-driven global society. But it’s not difficult to imagine the amazing pursuits you’ll be prepared for with a degree in computer science from Fordham’s department of Computer and Information Sciences.</p>
+
+                        <p style="font-size: 19px;"> The computer science major emphasizes science and technology, including software design and programming, computer architecture and functions, and the development of an ability to analyze and solve problems in using the computer as a tool. </p>
+
+                        <br> 
+                        <p style="font-size: 19px;">Get inspired by the classes we offer. Programming. Bioinformatics. Robotics. Video game design. Cyber security. Networking. Database management. Health and medical informatics.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <style>
+
+            body {
+                height: 100vh;
+                font-family: rale;
+                
+            }
+
+            h1{ 
+                color: maroon;
+                font-size: 55px;
+            }
+
+            .parent-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+
+            .computer-science-container {
+                order: 1;
+                padding: 0 50px;
+            }
+
+           
+
+            .majors-container {
+                order: 2;
+                display: flex;
+                flex-direction: column;
+                border-right: 1px solid #e7ebe7;
+            }
+            .majors-content-container {
+                padding: 0 50px;
+            }
+
+            .divider {
+                padding: 0 5px;
+            }
+
+            @media screen and (min-width: 1200px) {
+
+                .parent-container {
+                    flex-direction: row;
+                }
+                .computer-science-container {
+                    width: 900px;
+                    order: 2;
+                }
+
+                .majors-container {
+                    width: 300px;
+                    order: 1
+                }
+            }
+
+            .majors-container .majors-content-container p {
+                margin: 0;
+            }
+
+
+            .major-button {
+                text-align: center;
+                background-color: maroon;
+                color:white;
+            
+                padding-top: 16px;
+                padding-bottom: 16px;
+              
+            }
+
+            .passion{ 
+                text-align: left;
+                background-color: #D3D3D3;
+                color: black;
+                white-space: nowrap;
+                padding: 10px;
+                height: 60px;
+                width: 200px;
+
+               
+            }
+
+            .computer-science-container .computer-science-content-container h1 {
+                margin: 0;
+            }
+
+        </style>
+
+    </body>
+</html>

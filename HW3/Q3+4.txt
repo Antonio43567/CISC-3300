@@ -1,0 +1,17 @@
+3. Compare and contrast margin, padding, and border.
+
+Margin is the space outside an element, influencing its positioning in relation to other elements, but does not contribute to the element's size. It is often used for creating space between elements. Padding on the other hand is the space inside an element, affecting the positioning of the content within the element. It expands the size of the element. Lastly, border defines the boundary of an element, visually separating its content and padding from the margin. It contributes to the overall size of the element and can be customized in terms of width, style, and color.
+
+4. Define the following flexbox css rules
+
+A) Display: flex is applied to containers and enables flex box layout for its children. The flex container is inline or block depending on the given value. The containers children are laid out along a single row by default or column depending on the writing mode. 
+B) Flex-direction defines the main axis along which the flex items are placed inside the flex container. Flexbox is a single direction layout concept. 
+C) Flex-wrap defines whether the flex container should wrap its content if it overflows the containers dimensions. By default, flex items will always try to fit all boxes onto one side. With this property it allows you to change that and it allows items to be wrapped as needed. Ex(no wrap, wrap, wrap-reverse). 
+D)Justify-content/align-items defines the alignment along the main axis which allows for the distribution of extra free space. (Ex: flex-start, flex-end, center, etc). It also exerts some control over the alignment of items when they overflow the line.
+E) Align-content defines how multiple lines are spaced along the cross axis (when there are multiple lines of flex items). This property has no effect if there is only one line. 
+Ex: 
+flex-start: Lines are packed toward the start of the cross axis.
+flex-end: Lines are packed toward the end of the cross axis.
+center: Lines are centered along the cross axis.
+space-between: Lines are evenly distributed along the cross axis.
+space-around: Lines are evenly distributed along the cross axis 
