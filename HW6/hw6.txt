@@ -1,0 +1,57 @@
+1. What is HTTP? What are the different HTTP request methods and how do they differ?
+
+HTTP, which stands for Hypertext Transfer Protocol, is the foundation of data communication on the World Wide Web. It is a protocol that facilitates the transfer of hypertext requests and information on the internet. HTTP defines how messages are formatted and transmitted, and what actions Web servers and browsers should take in response to various commands.
+
+HTTP Methods:
+
+GET: The GET method requests a representation of the specified resource. Requests using GET should only retrieve data and should have no other effect on the data.
+
+HEAD: The HEAD method asks for a response identical to that of a GET request, but without the response body. This is useful for retrieving meta-information written in response headers, without having to transport the entire content.
+
+POST: The POST method is used to submit an entity to the specified resource, often causing a change in state or side effects on the server.
+
+PUT: The PUT method replaces all current representations of the target resource with the request payload.
+
+DELETE: The DELETE method deletes the specified resource.
+
+PATCH: The PATCH method is used to apply partial modifications to a resource.
+
+OPTIONS: The OPTIONS method is used to describe the communication options for the target resource.
+
+CONNECT: The CONNECT method establishes a tunnel to the server identified by the target resource.
+
+TRACE: The TRACE method performs a message loop-back test along the path to the target resource.
+
+Difference: 
+GET vs. POST: GET requests are used to retrieve data from the server without any side effects, whereas POST requests are used to send data to the server to create/update a resource.
+PUT vs. PATCH: PUT is used to replace an existing resource or create a new one if it doesn't exist, while PATCH is used for making partial updates to an existing resource.
+GET vs. HEAD: Both are used to fetch data, but HEAD requests do not return the body of the request, only the header.
+DELETE: It is specifically used to remove resources from the server.
+OPTIONS: Provides the supported HTTP methods by the server, useful for CORS (Cross-Origin Resource Sharing) preflight requests.
+CONNECT and TRACE: Less commonly used, CONNECT is for establishing proxy connections, and TRACE is for diagnostic tracing of request paths.
+
+
+
+2. What is an API? What is JSON?
+
+An API allows programs (including scripts) talk to each other. It enables developers to access and use functionalities provided by other software applications without having to understand the detailed code behind them. The DOM is an API and it allows scripts to access and update contents of a web page while loaded into a browser. JSON (JavaScript Object Notation) uses a similar syntax to object literal notation in order to represent data. JSON is a lightweight format for storing and transporting data and is often used when data is sent from a server to a web page
+
+
+
+3. What is AJAX? What is meant by asynchronous code?
+
+AJAX is a web development technique used for creating interactive web applications. The key idea behind AJAX is to make web pages feel more responsive and dynamic by exchanging small amounts of data with the server in the background, without having to reload the entire page. Asynchronous code refers to operations that do not block or wait for the operation to complete before moving on to the next line of code. In the context of web development, this means that the website can continue to be functional and responsive to user inputs while it waits for responses from the server or completes long-running tasks. 
+
+
+4. Use jquery to make some requests to our json server:
+a. Write a get request to request the data from one of the resources.
+b. Write a post request to add a new resource.
+c. Write a put request to replace a previous resource.
+
+5. Grab some data from an api open to the public and make a tiny application out of it,
+a. can be a html page that shows the weather - https://open-meteo.com/:
+b. or revisit the pokemon api
+i. should be different from the set up shown in lecture
+c. Or find something else, a different public API
+d. use jquery to make an api call and display data as html elements you create from
+the response.
