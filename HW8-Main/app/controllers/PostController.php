@@ -19,11 +19,11 @@ class PostController extends Controller
         $description = $_POST['description'] ? $_POST['description'] : false;
         $errors = [];
 
-        //validate username 
+  
         if ($username) {
             $username = htmlspecialchars($username, ENT_QUOTES|ENT_HTML5, 'UTF-8', true);
 
-            //validate text length
+            
             if (strlen($username) < 2) {
                 $errors['usernameShort'] = 'username is too short';
             }
@@ -31,11 +31,11 @@ class PostController extends Controller
             $errors['requiredName'] = 'username is required';
         }
 
-        // validate title 
+      
         if ($title) {
             $title = htmlspecialchars($title, ENT_QUOTES|ENT_HTML5, 'UTF-8', true);
 
-            //validate text length
+            
             if (strlen($title) < 2) {
                 $errors['titleShort'] = 'title is too short';
             }
@@ -43,11 +43,10 @@ class PostController extends Controller
             $errors['requiredTitle'] = 'title is required';
         }
 
-        // validate description
         if ($description) {
             $description = htmlspecialchars($description, ENT_QUOTES|ENT_HTML5, 'UTF-8', true);
 
-            //validate text length
+      
             if (strlen($description) < 2) {
                 $errors['descriptionShort'] = 'description is too short';
             }
@@ -55,7 +54,6 @@ class PostController extends Controller
             $errors['requiredDescription'] = 'description is required';
         }
 
-        //if we have errors
         if (count($errors)) {
             http_response_code(400);
             echo json_encode($errors);
@@ -71,3 +69,4 @@ class PostController extends Controller
         exit();
     }
 }
+
