@@ -1,0 +1,11 @@
+1. Escaping data means changing certain characters in the data that might be seen as commands or code, making them safe to use on a website or in a database query. This process turns special characters into their encoded forms, making sure they're seen as just data and not something that can run as code. This step lowers the chance of security issues, such as SQL injection or cross-site scripting attacks, where attackers could exploit these characters to run malicious code.
+2. REST (Representation State Transfer) is a design approach used to make sure computer systems can talk to each other over the internet. It focuses on keeping things simple by not having the server and client remember any previous interactions (statelessness) and by separating their roles. In practice, this means when a client asks the server for something, it includes all the details needed in that single request, so the server doesn't have to remember anything from before to respond properly.
+2b.  Resources are the nouns of the web that enforce statelessness. Resources describe any object, document, or thing that you may need to store or send to other services. 
+2C. i.   getting a list of users?
+            GET http://Nike.com/customers
+       ii.  getting a particular user?
+            GET http://Nike.com/customers/456
+       iii. saving a user? 
+            POST http://Nike.com/customers
+3. Cookies are small pieces of information that a website creates and sends to your browser. They help the website remember you and your visit, making it smoother for you to come back to the site later.
+4. A session refers to a series of actions a user takes on a website during a specific period. This can include looking at different pages, interacting with content, engaging in social activities, and making transactions. A user might have several sessions, each representing a separate visit to the site.
