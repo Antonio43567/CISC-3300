@@ -1,0 +1,43 @@
+Amanda Sukhdeo
+Internet and Web Programming
+Spring 2024 
+Homework 8
+
+1. What does it mean to escape data? How does escaping data help us avoid malicious code?
+    Escaping data refers to modifying characters within data that could be interpreted as 
+    commands or code to render them harmless within a web page or database query. Special 
+    characters are converted into their encoded equivalents, ensuring that they are treated 
+    as literal data rather than executable code, thus reducing the risk of security 
+    vulnerabilities like SQL injection or cross-site scripting attacks.
+
+2. Please read through: https://www.codecademy.com/article/what-is-rest
+    a. What is REST? What is meant by Statelessness?
+        REST (REpresentation State Transfer) is an architectural style that facilitates 
+        communication between computer systems on the web. It emphasizes statelessness 
+        and the separation of concerns between client and server. Statelessness refers 
+        to the characteristic where the server does not need to know anything about what 
+        state the client is in and vice versa. This means that each request from the 
+        client  to the server must contain all the information necessary for the server 
+        to fulfill the request without relying on any previous communication or context. 
+
+    b. What is a resource?
+        Resources are the nouns of the web that enforce statelessness. Resources describe 
+        any object, document, or thing that you may need to store or send to other services. 
+
+    c. Look at the section on Path design: In a RESTful architecture paradigm what would be 
+       the proper way to create a path for: (provide URL and HTTP method)
+       i.   getting a list of users?
+            GET http://fashionboutique.com/customers
+       ii.  getting a particular user?
+            GET http://fashionboutique.com/customers/456
+       iii. saving a user? 
+            POST http://fashionboutique.com/customers
+
+3. What is a Cookie?
+    Cookies are files of information that a web server generates and sends to a web browser. 
+    They are used by the website to remember your visit, making easier to visit the site again.
+
+4. What is a session?
+    A session is a group of user interactions with a website that take place within a given time 
+    frame. A single session might contain multiple page views, events, social interactions, and 
+    e-commerce interactions. A single user can have multiple sessions. 
