@@ -1,12 +1,23 @@
 <?php
-
-require_once('config/get.php'); 
-
-$query = "select * from Contact"; 
+// Database connection and query handling
+$con = mysqli_connect("localhost", "root", "root", "Final Project");
+if (!$con) {
+    die("Failed to connect: " . mysqli_connect_error());
+}
+$query = "SELECT * FROM Contact"; 
 $result = mysqli_query($con, $query);
-
-
+if (!$result) {
+    die("Error on query execution: " . mysqli_error($con));
+}
+$contacts = [];
+while($row = mysqli_fetch_assoc($result)) {
+    $contacts[] = $row;
+}
+mysqli_close($con);
 ?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +26,7 @@ $result = mysqli_query($con, $query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Antonio's projects Website</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     
     <!-- linking CSS document --> 
     <link rel= "stylesheet" href="style.css"> 
@@ -138,47 +150,61 @@ $result = mysqli_query($con, $query);
 
 <!--------projects using a get request --------> 
 
-<div id="projects">
-    <div class="container">
+
+    <div id="projects" class="container">
         <h1 class="sub-title">Projects</h1>
         <h4 style="color: red">(Hover over image to view description)</h4>
-        <div class="work-list">
-            <?php
-                // Check for an ID parameter in the URL
-                if (isset($_GET['id'])) {
-                    $projectId = intval($_GET['id']); 
-                    $query = "SELECT id, name, filename, GitLink, description FROM Projects WHERE id = $projectId";
-                } else {
-                    // If no ID is provided, fetch all projects
-                    $query = 'SELECT id, name, filename, GitLink, description FROM Projects ORDER BY id';
-                }
+        <div id="work-list" class="work-list">
 
-                //Execute Query 
-                $result = mysqli_query($con, $query);
+  
 
-                // Checking if query was successful
-                if (!$result) {
-                    echo 'Error Message: ' . mysqli_error($con) . '<br>';
-                    exit;
-                }
+    <script>
+        $(document).ready(function () {
 
-                // Loop through the records found
-                while ($record = mysqli_fetch_assoc($result)) {
-                    echo '<div class="work">';
-                    echo '<img src="images/' . htmlspecialchars($record['filename']) . '" height="250">';
-                    echo '<div class="layer">';
-                    echo '<h3>' . htmlspecialchars($record['name']) . '</h3>';
-                    echo '<p>' . htmlspecialchars($record['description']) . '</p>';
-                    if (!empty($record['GitLink'])) {
-                        echo '<a href="' . htmlspecialchars($record['GitLink']) . '" target="_blank" title="Go to GitHub project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>';
-                    }
-                    echo '</div>'; 
-                    echo '</div>'; 
-                }
-            ?>
-        </div> 
-    </div> 
-</div> 
+        const projectId = new URLSearchParams(window.location.search).get('id');
+    
+        const fetchUrl = projectId ? `config/get.php?id=${projectId}` : 'config/get.php';
+
+        
+        console.log("Making AJAX request to:", fetchUrl);
+
+        $.ajax({
+            url: fetchUrl,
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                console.log("Data received:", data);
+                $('#work-list').html('');
+
+              
+                $.each(data, function (key, project) {
+                    $('#work-list').append(`
+                        <div class="work">
+                            <img src="images/${project.filename}" height="250">
+                            <div class="layer">
+                                <h3>${project.name}</h3>
+                                <p>${project.description}</p>
+                                ${project.GitLink ? `<a href="${project.GitLink}" target="_blank" title="Go to GitHub project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>` : ''}
+                            </div>
+                        </div>
+                    `);
+                });
+            },
+            error: function (xhr, status, error) {
+                console.error("Error fetching data:", error);
+                console.error("Detailed server response:", xhr.responseText);
+            }
+        });
+        });
+    </script>
+
+    </div>
+</div>
+
+
+
+
+
 
 
 
