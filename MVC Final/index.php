@@ -243,7 +243,7 @@ $(document).ready(function () {
             
             <div class="contact-right">
                 <!-- Post Method (creates data)-->
-                <form action="controller/co" method="post"> 
+                <form action="controller/contactController.php" method="post"> 
                     <input type="text" name = "Name" placeholder="Your Name" required>
                     <input type="email" name= "email" placeholder="Your Email" required> 
                     <textarea name = "Message" rows = "6" placeholder = "Your Message" name="Message"></textarea>
